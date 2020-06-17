@@ -68,7 +68,7 @@ export class App extends Component {
   handleBinSubmit = () => {
     this.setState({binSearches: null, message: null});
     let value = Number(this.state.input.value);
-    let result = this.binarySearch(this.state.arr, value);
+    let result = this.binarySearch(this.state.arr.sort(), value);
     if (!result) {
       this.setState({message: 'Could Not Find The Item!'});
     } else {
